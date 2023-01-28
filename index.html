@@ -1,3 +1,95 @@
-<h1>
-  Hello World
-</h1>
+<!DOCTYPE html>
+<!--全局html基础结构-->
+<html lang="zh-CN" class="mingInit">
+
+<!---------------------->
+
+<head>
+    <!--指定编码-->
+    <meta charset="utf-8">
+
+    <!--设置viewport信息-->
+    <!--视图宽度=设备视图宽度-->
+    <!--默认缩放=不缩放(1)-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--指定作者-->
+    <meta name="author" content="MingMoe">
+
+    <!--设置Title-->
+    <title>大明酱的网络导航🌏</title>
+
+    <style>
+      .mingInit {
+        margin: 0 0;
+        padding: 0 0;
+      }
+
+      .mingCanvas {
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+      
+      html, body {
+        overflow: hidden;
+      }
+
+      .mingM{
+        z-index: 1;
+        position:fixed;
+        margin-top: 30%;
+        margin-left: 70%;
+
+        min-width: 25%;
+        min-height: 30%;
+
+        border: dashed red;
+      }
+
+      .mingTitle{
+        z-index: 1;
+        text-align: center;
+      }
+    </style>
+</head>
+
+<!---------------------->
+
+<body class="mingInit">
+  <div class="mingM mingInit">
+    <h1 class="mingInit mingTitle">欢迎来到大明酱的网络导航^_^</h1>
+    <h1 class="mingInit mingTitle"><a href="https://blog.kawayi.moe">Blog</a></h1>
+    <h1 class="mingInit mingTitle"><a href="https://most.kawayi.moe">最萌人物评选</a></h1>
+  </div>
+  <canvas id="MingCanvas" class="mingInit mingCanvas"></canvas>
+  
+<script>
+  
+  var c=document.getElementById("MingCanvas");
+  var ctx=c.getContext("2d");
+  //c.width = document.body.clientWidth;
+  //c.height = document.body.clientHeight;
+  c.width = window.innerWidth;
+  c.height = window.innerHeight;
+  var width = c.width;
+  var height = c.height;
+  var line = height / 5
+
+  ctx.fillStyle="#5BCEFA";
+  ctx.fillRect(0,0,width,line);
+  ctx.fillRect(0,line * 4,width,line);
+  
+  ctx.fillStyle="#F5A9B8";
+  ctx.fillRect(0,line,width,line);
+  ctx.fillRect(0,line * 3,width,line);
+
+  ctx.fillStyle="#FFF";
+  ctx.fillRect(0,line * 2,width,line);
+
+</script>
+
+</body>
+<!---------------------->
+
+</html>
