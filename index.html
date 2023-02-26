@@ -51,6 +51,13 @@
         z-index: 1;
         text-align: center;
       }
+
+      body {
+          background-image: url('background.png');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
     </style>
 </head>
 
@@ -65,28 +72,6 @@
   <canvas id="MingCanvas" class="mingInit mingCanvas"></canvas>
   
 <script>
-  
-  var c=document.getElementById("MingCanvas");
-  var ctx=c.getContext("2d");
-  //c.width = document.body.clientWidth;
-  //c.height = document.body.clientHeight;
-  c.width = window.innerWidth;
-  c.height = window.innerHeight;
-  var width = c.width;
-  var height = c.height;
-  var line = height / 5
-
-  ctx.fillStyle="#5BCEFA";
-  ctx.fillRect(0,0,width,line);
-  ctx.fillRect(0,line * 4,width,line);
-  
-  ctx.fillStyle="#F5A9B8";
-  ctx.fillRect(0,line,width,line);
-  ctx.fillRect(0,line * 3,width,line);
-
-  ctx.fillStyle="#FFF";
-  ctx.fillRect(0,line * 2,width,line);
-
 </script>
 
 </body>
